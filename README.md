@@ -30,3 +30,15 @@ The `.openai/hosting.json` file records a previous Sites setup; it is not requir
 - `SOURCES.md`: content and image provenance.
 
 Confirm menu prices and current restaurant details with the owner before public launch.
+
+## GitHub Pages
+
+Presentation URL: https://diego-media.github.io/DokMaiLao/
+
+GitHub Pages serves the root of the `gh-pages` branch, containing only the contents of `dist/`. To publish an update after committing changes on `main`:
+
+```sh
+git subtree split --prefix dist -b pages-update
+git push origin pages-update:gh-pages
+git branch -D pages-update
+```
