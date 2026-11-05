@@ -1,0 +1,6 @@
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/build/
+.impeccable/questions/
+*.tar.gz
+node_modules/
