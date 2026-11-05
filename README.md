@@ -18,7 +18,7 @@ Open http://127.0.0.1:5177/.
 
 Publish the contents of `dist/` with any static website host. No build step or package installation is required.
 
-The `.openai/hosting.json` file records a previous Sites setup; it is not required for other hosting providers. Before going live on a chosen domain, update the canonical website URLs and social image URL in `dist/index.html`.
+The `.openai/hosting.json` file records a previous Sites setup; it is not required for other hosting providers. When changing the public domain, update the website URLs and social image URL in `dist/index.html`.
 
 ## Editing
 
@@ -35,10 +35,4 @@ Confirm menu prices and current restaurant details with the owner before public 
 
 Presentation URL: https://diego-media.github.io/DokMaiLao/
 
-GitHub Pages serves the root of the `gh-pages` branch, containing only the contents of `dist/`. To publish an update after committing changes on `main`:
-
-```sh
-git subtree split --prefix dist -b pages-update
-git push origin pages-update:gh-pages
-git branch -D pages-update
-```
+GitHub Pages serves the root of the `gh-pages` branch, containing only the contents of `dist/`. After committing changes on `main`, publish the updated contents of `dist/` to the root of `gh-pages`. Preserve the existing `gh-pages` history when creating the deployment commit. GitHub Pages publishes that branch automatically.
